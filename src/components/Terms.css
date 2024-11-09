@@ -1,0 +1,29 @@
+.terms-container {
+    padding: 20px;
+    background-color: #f8f9fa; /* Light background for contrast */
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #343a40; /* Darker text color */
+  }
+  
+  .accordion-button {
+    background-color: #007bff; /* Bootstrap primary color */
+    color: white;
+  }
+  
+  .accordion-button:not(.collapsed) {
+    color: white; /* Text color when expanded */
+  }
+  
+  .accordion-body {
+    background-color: #e9ecef; /* Slightly darker background for body */
+  }
+  
+  .card {
+    margin-bottom: 15px; /* Space between cards */
+  }

@@ -1,13 +1,50 @@
 body {
+ background:#1a1a1a;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.suggestion-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.suggestion-list .suggestion {
+  padding: 1.25rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.75rem;
+  background: rgba(255, 215, 0, 0.2); /* Light gold background */
+  transition: background 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.suggestion-list .suggestion:hover {
+  background: rgba(255, 215, 0, 0.5); /* Darker gold on hover */
+}
+
+.suggestion-list .suggestion .text {
+  font-weight: 400;
+}
+
+.suggestion-list .suggestion .icon {
+  font-size: 1.3rem;
+}
+
+.sidebar-nav .nav-link {
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.3s;
+}
+
+.sidebar-nav .nav-link:hover {
+  background-color: #444;
+}
+
+.sidebar-nav .nav-link i {
+  margin-right: 0.5rem;
 }

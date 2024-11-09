@@ -1,0 +1,101 @@
+.pricing-container {
+  background-color: #343a40; /* Main color background */
+  padding: 60px 20px;
+  padding-right: 40px; /* Ensure right padding */
+}
+
+.pricing-container h2 {
+  color: #FFD700; /* Contrast text color */
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.pricing-box {
+  background-color: #ffffff; /* White background */
+  padding: 20px; /* Minimized box sizes */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: #000000; /* Black text color */
+  margin-right: 20px; /* Add margin to the right side */
+}
+
+.featured-box {
+  background-color: #FFD700; /* Main color background */
+  color: #001d3f; /* Contrasting text color */
+  transform: scale(1.05);
+  margin-right: 20px; /* Ensure visibility */
+}
+
+.pricing-box h3, .pricing-box .price, .pricing-box .plan-type {
+  color: #000000; /* Black text color */
+}
+
+.pricing-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.pricing-box ul li {
+  margin-bottom: 8px;
+  font-size: 0.9rem; /* Adjust font size */
+  display: flex;
+  align-items: center; /* Align items vertically */
+}
+
+.pricing-box ul li svg {
+  margin-right: 10px;
+}
+
+.pricing-box button {
+  margin-top: 20px; /* Add margin to separate button from content */
+}
+
+.pricing-box:hover {
+  transform: scale(1.08);
+  transition: transform 0.3s ease;
+}
+
+.payment-methods {
+  margin-top: 60px;
+  text-align: center;
+  color: #FFD700; /* Contrast text color */
+}
+
+.payment-logos {
+  background-color: #ffffff; /* White background */
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  animation: move 2s linear infinite;
+}
+
+.payment-logos img {
+  max-width: 100px;
+  height: auto;
+}
+
+@keyframes move {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+@media (max-width: 768px) {
+  .pricing-box {
+    margin-bottom: 20px;
+  }
+
+  .featured-box {
+    transform: none; /* Remove scale effect on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing-box {
+    padding: 15px;
+  }
+}

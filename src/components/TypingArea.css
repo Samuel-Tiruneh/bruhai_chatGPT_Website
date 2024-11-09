@@ -1,0 +1,154 @@
+.typing-area-wrapper {
+  display: flex;
+  justify-content: center; /* Center align the whole wrapper */
+  padding: 1rem 0; /* Add padding for breathing room */
+}
+
+.typing-area {
+  position: fixed;
+  width: 80%; /* Increase the width of the typing area */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--primary-color);
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.typing-form {
+  display: flex;
+  align-items: center; /* Align items to the center */
+}
+
+.input-wrapper {
+  height: 56px;
+  width: 100%; /* Ensure it takes up available space */
+  display: flex;
+  position: relative;
+  align-items: center; /* Center items vertically */
+}
+
+.typing-input {
+  width: 100%;
+  height: 100%;
+  border: 2px solid #FFD700; /* Main color border */
+  outline: none;
+  font-size: 1rem;
+  color: #fff; /* Text color to white */
+  caret-color: #fff; /* Cursor color to white */
+  border-radius: 6.2rem;
+  padding: 1.1rem 4rem 1.1rem 1.5rem; /* Adjust padding */
+  background: #343a40; /* Adjusted background color */
+}
+
+.typing-input:focus {
+  background: #343a40; /* Ensure background remains the same */
+  color: #fff; /* Ensure text remains white while typing */
+}
+
+.typing-input::placeholder {
+  color: #fff; /* Placeholder color to white */
+}
+
+.icon {
+  height: 56px;
+  width: 56px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #343a40;
+  color: #FFD700; /* Main color for send button icon */
+  border: none; /* Removed border from send button */
+}
+
+.icon:hover {
+  background: rgba(255, 215, 0, 0.5);
+}
+
+.input-wrapper .icon {
+  position: absolute;
+  right: 0;
+  outline: none;
+  background: none;
+  color: #FFD700; /* Main color for send button icon */
+  transform: scale(0);
+  transition: transform 0.2s ease;
+}
+
+.input-wrapper .typing-input:valid ~ .icon {
+  transform: scale(1);
+}
+
+.disclaimer-text {
+  font-size: 0.85rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: #FFD700; /* Main color for disclaimer text */
+}
+
+
+.clear-button {
+  font-size: 1.2rem;
+  height: 40px;
+  width: 100px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #FFD700; /* Gold background */
+  color: #343a40; /* Dark text color */
+  border: none; /* Removed border from clear button */
+  margin-left: 10px; /* Add some space between the clear button and input box */
+}
+
+.clear-button:hover {
+  background: #fff;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .typing-area {
+    width: 90%;
+  }
+
+  .input-wrapper {
+    height: 48px;
+  }
+
+  .typing-input {
+    padding: 0.75rem 3rem 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .icon {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .typing-area {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .input-wrapper {
+    height: 40px;
+  }
+
+  .typing-input {
+    padding: 0.5rem 2rem 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .icon {
+    height: 40px;
+    width: 40px;
+  }
+}

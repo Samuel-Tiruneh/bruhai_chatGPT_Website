@@ -1,0 +1,139 @@
+.login-container .divider::after,
+.login-container .divider::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.login-container .img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+h2.text-center {
+  color: #FFD700;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.login-container .login-form {
+  margin-left: auto;
+  box-shadow: -10px 10px 10px -5px #ffd700; /* Add box shadow on the left and bottom only */
+  padding-left: 10px; /* Add padding to create space between the form and the shadow */
+}
+
+.login-container .input-with-icon {
+  position: relative;
+}
+
+.login-container .input-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #ffd700;
+  font-size: 1.2rem; /* Adjust the font size */
+}
+
+.login-container .input-icon-field {
+  padding-left: 2.5rem; /* Add padding to make space for icons */
+}
+
+.login-container .form-control {
+  margin-bottom: 0; /* Remove bottom margin */
+  height: 50px; /* Fixed height */
+  line-height: 1.5; /* Adjust line-height to center text */
+}
+
+.login-container .custom-checkbox {
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.login-container .custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.login-container .custom-checkbox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  background-color: #eee;
+  border-radius: 3px;
+}
+
+.login-container .custom-checkbox input:checked ~ .checkmark {
+  background-color: #ffd700;
+}
+
+.login-container .custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.login-container .custom-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.login-container .custom-checkbox .checkmark:after {
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.login-container .btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 0.75rem 1.5rem;
+  height: 50px; /* Fixed height */
+  line-height: 1.5; /* Adjust line-height to center text */
+  margin-bottom: 0; /* Remove bottom margin */
+}
+
+.login-container .laser-button:hover {
+  background-color: #ffb700;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+  .login-container .p-3.my-5 {
+    padding: 2rem 0;
+  }
+
+  .login-container .img-fluid {
+    margin-bottom: 1rem;
+  }
+
+  .login-container .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    height: 40px; /* Adjust height for smaller screens */
+  }
+
+  .login-container .login-form {
+    margin: 0 auto; /* Center form on small screens */
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}

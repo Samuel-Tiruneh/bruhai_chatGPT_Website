@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
+.faq-container {
+  padding: 40px;
+  background-color: #343a40; /* Dark background */
+  max-width: 1200px; /* Set a max-width to ensure proper centering */
+  margin: 0 auto; /* Center the container */
+}
+
+.faq-container h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #FFD700; /* Main color text */
+  font-weight: bold;
+}
+
+.faq-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.faq-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 20px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: #FFD700; /* Gold background */
+  color: #343a40; /* Dark text color for questions */
+  flex: 0 0 48%; /* Make each box take up roughly half the row */
+  box-sizing: border-box;
+}
+
+.question-icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.faq-item h3 {
+  margin-bottom: 10px;
+  color: #343a40; /* Dark text color for questions */
+  font-weight: bold; /* Make question titles bolder */
+  font-size: 1.5rem;
+}
+
+.faq-item p, .faq-item ul {
+  font-family: "Chakra Petch", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-style: normal;
+  padding:10px 50px 10px 10px;
+  color: #fff; /* White color for answers */
+}
+
+.faq-item ul {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+.faq-item ul li {
+  margin-bottom: 5px;
+  color: #ffffff; /* White color for answers */
+}
+
+@media (max-width: 576px) {
+  .faq-row {
+    flex-direction: column; /* Stack FAQ items vertically */
+  }
+
+  .faq-item {
+    flex: none;
+    width: 100%;
+    margin-bottom: 20px; /* Add space between stacked items */
+  }
+
+  .faq-item h3 {
+    font-size: 1.2rem; /* Adjust title size */
+  }
+
+  .faq-item p, .faq-item ul {
+    font-size: 0.9rem; /* Adjust text size */
+    padding: 10px; /* Adjust padding */
+  }
+
+  .question-icon {
+    font-size: 1.2rem; /* Adjust icon size */
+    margin-right: 5px; /* Adjust margin */
+  }
+}
